@@ -69,7 +69,7 @@ class de_handler
             }
          else
 			{
-			$r['regrinfo']['domain']['changed'] = substr($r['regrinfo']['domain']['changed'], 0, 10);
+			$r['regrinfo']['domain']['changed'] = substr(@$r['regrinfo']['domain']['changed'], 0, 10);
 			$r['regrinfo']['registered'] = 'yes';
 			}
 		return $r;

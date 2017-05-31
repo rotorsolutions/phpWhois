@@ -867,7 +867,7 @@ else
 	if ($res['y'] <= 99)
 		$res['y'] = ($res['y'] ?? 0) + 1900;
 
-return sprintf("%.4d-%02d-%02d",$res['y'],$res['m'],$res['d']);
+return sprintf("%.4d-%02d-%02d",$res['y'],$res['m'],@$res['d']);
 }
 
 ?>

@@ -862,10 +862,10 @@ if ($res['m'] > 12)
 	}
 
 if ($res['y'] < 70)
-	$res['y'] += 2000;
+	$res['y'] = ($res['y'] ?? 0) + 2000;
 else
 	if ($res['y'] <= 99)
-		$res['y'] += 1900;
+		$res['y'] = ($res['y'] ?? 0) + 1900;
 
 return sprintf("%.4d-%02d-%02d",$res['y'],$res['m'],$res['d']);
 }

@@ -843,10 +843,10 @@ class idna_convert
                 }
                 if ($v >> 6 == 2) { // Bit mask must be 10xxxxxx
                     $v = ($v - 128) << ($next_byte * 6);
-                    $output[($out_len - 1)] += $v;
                     if (!isset($output[($out_len - 1)])) {
                         $output[($out_len - 1)] = 0;
                     }
+                    $output[($out_len - 1)] += $v;
                     --$next_byte;
                 } else {
                     $this->_error('Conversion from UTF-8 to UCS-4 failed: malformed input at byte '.$k);

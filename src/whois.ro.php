@@ -69,7 +69,7 @@ class ro_handler
 
 		if (isset($reg['domain']['description']))
 			{
-			$reg['owner'] = get_contact($reg['domain']['description'],$extra);
+			$reg['owner'] = get_contact(@$reg['domain']['description'],$extra);
 			unset($reg['domain']['description']);
 
 			foreach($reg as $key => $item)
@@ -78,7 +78,7 @@ class ro_handler
 					{
 					$data = $item['address'];
 					unset($reg[$key]['address']);
-					$reg[$key] = array_merge($reg[$key],get_contact($data,$extra));
+					$reg[$key] = array_merge($reg[$key],get_contact(@$data,$extra));
 					}
 				}
 

@@ -56,25 +56,25 @@ class nl_handler
 			}
 
 		if (isset($r['regrinfo']['tech']))
-			$r['regrinfo']['tech'] = $this->get_contact($r['regrinfo']['tech']);
+			$r['regrinfo']['tech'] = $this->get_contact(@$r['regrinfo']['tech']);
 
 		if (isset($r['regrinfo']['zone']))
-			$r['regrinfo']['zone'] = $this->get_contact($r['regrinfo']['zone']);
+			$r['regrinfo']['zone'] = $this->get_contact(@$r['regrinfo']['zone']);
 					
 		if (isset($r['regrinfo']['admin']))
-			$r['regrinfo']['admin'] = $this->get_contact($r['regrinfo']['admin']);
+			$r['regrinfo']['admin'] = $this->get_contact(@$r['regrinfo']['admin']);
 				
 		if (isset($r['regrinfo']['owner']))
-			$r['regrinfo']['owner'] = $this->get_contact($r['regrinfo']['owner']);
+			$r['regrinfo']['owner'] = $this->get_contact(@$r['regrinfo']['owner']);
 
 		$r['regrinfo']['registered'] = 'yes';
 		format_dates($r,'dmy');
 		return $r;
 		}
 
-	function get_contact($data)
+	function get_contact(@$data)
 		{
-		$r = get_contact($data);
+		$r = get_contact(@$data);
 
 		if (isset($r['name']) && preg_match('/^[A-Z0-9]+-[A-Z0-9]+$/',$r['name']))
 			{

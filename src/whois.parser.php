@@ -542,22 +542,22 @@ return $r;
 function get_contacts ( $array, $extra_items='', $has_org= false )
 {
 if (isset($array['billing']))
-	$array['billing'] = get_contact($array['billing'], $extra_items, $has_org);
+	$array['billing'] = get_contact(@$array['billing'], $extra_items, $has_org);
 
 if (isset($array['tech']))
-	$array['tech'] = get_contact($array['tech'], $extra_items, $has_org);
+	$array['tech'] = get_contact(@$array['tech'], $extra_items, $has_org);
 
 if (isset($array['zone']))
-	$array['zone'] = get_contact($array['zone'], $extra_items, $has_org);
+	$array['zone'] = get_contact(@$array['zone'], $extra_items, $has_org);
 			
 if (isset($array['admin']))
-	$array['admin'] = get_contact($array['admin'], $extra_items, $has_org);
+	$array['admin'] = get_contact(@$array['admin'], $extra_items, $has_org);
 		
 if (isset($array['owner']))
-	$array['owner'] = get_contact($array['owner'], $extra_items, $has_org);
+	$array['owner'] = get_contact(@$array['owner'], $extra_items, $has_org);
 
 if (isset($array['registrar']))
-	$array['registrar'] = get_contact($array['registrar'], $extra_items, $has_org);
+	$array['registrar'] = get_contact(@$array['registrar'], $extra_items, $has_org);
 
 return $array;
 }

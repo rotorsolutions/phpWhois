@@ -75,10 +75,10 @@ class zanet_handler
 		else
 			{
 			if (isset($r['regrinfo']['admin']))
-				$r['regrinfo']['admin'] = get_contact($r['regrinfo']['admin']);
+				$r['regrinfo']['admin'] = get_contact(@$r['regrinfo']['admin']);
 
 			if (isset($r['regrinfo']['tech']))
-				$r['regrinfo']['tech'] = get_contact($r['regrinfo']['tech']);
+				$r['regrinfo']['tech'] = get_contact(@$r['regrinfo']['tech']);
 			}
 
 		$r['regyinfo']['referrer'] = 'http://www.za.net/'; // or http://www.za.org

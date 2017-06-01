@@ -59,7 +59,7 @@ class be_handler
 
 			if (isset($r['regrinfo']['agent']))
 				{
-				$sponsor = get_contact($r['regrinfo']['agent'],$trans);
+				$sponsor = get_contact(@$r['regrinfo']['agent'],$trans);
 				unset($r['regrinfo']['agent']);
 				$r['regrinfo']['domain']['sponsor'] = $sponsor;
 				}

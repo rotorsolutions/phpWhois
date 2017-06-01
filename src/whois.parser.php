@@ -341,6 +341,7 @@ if (!$items)
 $r = [];
 $disok = true;
 
+if (is_array($rawdata))
 while (list($key,$val) = each($rawdata))
 	{
 	if (trim($val) != '')

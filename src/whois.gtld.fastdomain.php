@@ -59,7 +59,7 @@ class fastdomain_handler
 
 		if (isset($r['domain']['sponsor']) && is_array($r['domain']['sponsor']))
 
-		$r['domain']['sponsor'] = $r['domain']['sponsor'][0];
+		$r['domain']['sponsor'] = @$r['domain']['sponsor'][0];
 
 		if (isset($r['domain']['nserver']))
 			{

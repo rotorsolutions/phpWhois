@@ -53,8 +53,8 @@ class uk_handler
 
 		if (isset($r['regrinfo']['owner']))
 			{
-			$r['regrinfo']['owner']['organization'] = $r['regrinfo']['owner']['organization'][0];
-			$r['regrinfo']['domain']['sponsor'] = $r['regrinfo']['domain']['sponsor'][0];
+			$r['regrinfo']['owner']['organization'] = @$r['regrinfo']['owner']['organization'][0];
+			$r['regrinfo']['domain']['sponsor'] = @$r['regrinfo']['domain']['sponsor'][0];
 			$r['regrinfo']['registered'] = 'yes';
 
 			$r = format_dates($r, 'dmy');

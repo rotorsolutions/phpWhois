@@ -64,7 +64,7 @@ class it_handler
 
 		if (isset($r['regrinfo']['registrar']))
 			{
-			$r['regrinfo']['domain']['registrar'] = $r['regrinfo']['registrar'];
+			$r['regrinfo']['domain']['registrar'] = @$r['regrinfo']['registrar'];
 			unset($r['regrinfo']['registrar']);
 			}
 

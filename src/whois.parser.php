@@ -47,9 +47,9 @@ while (list($key,$val) = each($contacts))
 	if (isset($r[$key]))
 		{
 		if (is_array($r[$key]))
-	        $blk = $r[$key][count($r[$key])-1];
+	        $blk = @$r[$key][count($r[$key])-1];
 		else
-			$blk = $r[$key];
+			$blk = @$r[$key];
 
 		$blk = strtoupper(strtok($blk,' '));
 		if (isset($blocks[$blk])) $ret[$val] = $blocks[$blk];

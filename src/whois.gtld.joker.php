@@ -67,7 +67,7 @@ class joker_handler
 			{
 			if (isset($r['domain'][$tag]))
 				{
-				$r['owner'][$convert] = $r['domain'][$tag];
+				$r['owner'][$convert] = @$r['domain'][$tag];
 				unset($r['domain'][$tag]);
 				}
 			}

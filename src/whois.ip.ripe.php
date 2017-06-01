@@ -54,19 +54,19 @@ class ripe_handler
 
 		if (isset($r['network']['desc']))
 			{
-			$r['owner']['organization'] = $r['network']['desc'];
+			$r['owner']['organization'] = @$r['network']['desc'];
 			unset($r['network']['desc']);
 			}
 
 		if (isset($r['admin']['abuse-mailbox']))
 			{
-			$r['abuse']['email'] = $r['admin']['abuse-mailbox'];
+			$r['abuse']['email'] = @$r['admin']['abuse-mailbox'];
 			unset($r['admin']['abuse-mailbox']);
 			}
 
 		if (isset($r['tech']['abuse-mailbox']))
 			{
-			$r['abuse']['email'] = $r['tech']['abuse-mailbox'];
+			$r['abuse']['email'] = @$r['tech']['abuse-mailbox'];
 			unset($r['tech']['abuse-mailbox']);
 			}
 

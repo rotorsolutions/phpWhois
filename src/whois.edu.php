@@ -51,7 +51,7 @@ class edu_handler
 		if (isset($b['tech']))
 			{
 			if ($r['regrinfo']['tech']['name'] == 'Same as above')
-				$r['regrinfo']['tech'] = $r['regrinfo']['admin'];
+				$r['regrinfo']['tech'] = @$r['regrinfo']['admin'];
 			}
 
 		$r['regyinfo']['referrer'] = 'http://whois.educause.net';

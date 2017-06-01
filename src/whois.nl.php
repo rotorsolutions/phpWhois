@@ -78,7 +78,7 @@ class nl_handler
 
 		if (isset($r['name']) && preg_match('/^[A-Z0-9]+-[A-Z0-9]+$/',$r['name']))
 			{
-			$r['handle'] = $r['name'];
+			$r['handle'] = @$r['name'];
 			$r['name'] = array_shift ($r['address']);
 			}
 

@@ -50,7 +50,7 @@ class opensrs_handler
 		$r = easy_parser($data_str, $items, 'dmy', false, false, true);
 
 		if (isset($r['domain']['sponsor']) && is_array($r['domain']['sponsor']))
-			$r['domain']['sponsor'] = $r['domain']['sponsor'][0];
+			$r['domain']['sponsor'] = @$r['domain']['sponsor'][0];
 
 		return $r;
 		}

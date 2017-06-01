@@ -53,7 +53,7 @@ class ly_handler
 		if (!empty($r['regrinfo']['domain']['name']))
 			{
 			$r['regrinfo'] = get_contacts($r['regrinfo'],$extra);
-			$r['regrinfo']['domain']['name'] = $r['regrinfo']['domain']['name'][0];
+			$r['regrinfo']['domain']['name'] = @$r['regrinfo']['domain']['name'][0];
 			$r['regrinfo']['registered'] = 'yes';
 			}
 		else

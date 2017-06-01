@@ -95,10 +95,10 @@ class apnic_handler
 				if (is_array($r['network']['desc']))
 					{
 					$r['owner']['organization'] = array_shift($r['network']['desc']);
-					$r['owner']['address'] = $r['network']['desc'];
+					$r['owner']['address'] = @$r['network']['desc'];
 					}
 				else
-					$r['owner']['organization'] = $r['network']['desc'];
+					$r['owner']['organization'] = @$r['network']['desc'];
 
 				unset($r['network']['desc']);
 				}
@@ -106,9 +106,9 @@ class apnic_handler
 			if (isset($r['network']['address']))
 				{
 				if (isset($r['owner']['address']))
-					$r['owner']['address'][] = $r['network']['address'];
+					$r['owner']['address'][] = @$r['network']['address'];
 				else
-					$r['owner']['address'] = $r['network']['address'];
+					$r['owner']['address'] = @$r['network']['address'];
 
 				unset($r['network']['address']);
 				}

@@ -56,7 +56,7 @@ class ch_handler
 			{
 			$r['regrinfo'] = get_contacts($r['regrinfo'],$trans);
 
-			$r['regrinfo']['domain']['name'] = $r['regrinfo']['domain']['name'][0];
+			$r['regrinfo']['domain']['name'] = @$r['regrinfo']['domain']['name'][0];
 
 			if (isset($r['regrinfo']['domain']['changed'][0]))
 				$r['regrinfo']['domain']['changed'] = get_date($r['regrinfo']['domain']['changed'][0], 'dmy');

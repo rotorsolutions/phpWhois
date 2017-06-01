@@ -91,7 +91,7 @@ class jp_handler extends WhoisClient
 			if (!empty($r['regrinfo']['admin']['handle']) &&
 				$r['regrinfo']['admin']['handle'] == $r['regrinfo']['tech']['handle'])
 				{
-				$r['regrinfo']['tech'] = $r['regrinfo']['admin'];
+				$r['regrinfo']['tech'] = @$r['regrinfo']['admin'];
 				}
 			else
 				{

@@ -65,7 +65,7 @@ class br_handler
 
 		if (isset($r['domain']['owner']))
 			{
-			$r['owner']['organization'] = $r['domain']['owner'];
+			$r['owner']['organization'] = @$r['domain']['owner'];
 			unset($r['domain']['owner']);
 			}
 

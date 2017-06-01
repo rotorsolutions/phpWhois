@@ -55,7 +55,7 @@ class afrinic_handler
 
 		if (isset($r['network']['descr']))
 			{
-			$r['owner']['organization'] = $r['network']['descr'];
+			$r['owner']['organization'] = @$r['network']['descr'];
 			unset($r['network']['descr']);
 			}
 
